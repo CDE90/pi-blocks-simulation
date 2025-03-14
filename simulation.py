@@ -69,7 +69,7 @@ class Simulation:
 
     @property
     def mass_ratio(self):
-        """Calculate the ratio of masses (m₂/m₁)"""
+        """Calculate the ratio of masses (m2/m1)"""
         return self.block_1.mass / self.block_0.mass
 
     @property
@@ -260,7 +260,7 @@ def render(sim):
 
     # Label for block_0
     small_font = pygame.font.SysFont(None, 20)
-    block0_label = small_font.render(f"m₁={float(sim.block_0.mass)}", True, white)
+    block0_label = small_font.render(f"m1={float(sim.block_0.mass)}", True, white)
     screen.blit(
         block0_label,
         (
@@ -279,7 +279,7 @@ def render(sim):
     pygame.draw.rect(screen, blue, block_1_rect)
 
     # Label for block_1
-    block1_label = small_font.render(f"m₂={float(sim.block_1.mass)}", True, white)
+    block1_label = small_font.render(f"m2={float(sim.block_1.mass)}", True, white)
     screen.blit(
         block1_label,
         (
@@ -308,8 +308,8 @@ def render(sim):
         "Controls:",
         "SPACE: Pause/Resume",
         "R: Reset simulation",
-        "1/2: Decrease/Increase m₁",
-        "3/4: Decrease/Increase m₂",
+        "1/2: Decrease/Increase m1",
+        "3/4: Decrease/Increase m2",
         "+/-: Adjust simulation speed",
         "[/]: Adjust fraction precision",
     ]
@@ -323,8 +323,8 @@ def render(sim):
     data_texts = [
         f"Collisions: {sim.total_collisions}",
         f"Wall: {sim.wall_collisions}, Block: {sim.block_collisions}",
-        f"Mass Ratio (m₂/m₁): {float(sim.mass_ratio):.1f}",
-        f"√(m₂/m₁): {math.sqrt(float(sim.mass_ratio)):.2f}",
+        f"Mass Ratio (m2/m1): {float(sim.mass_ratio):.1f}",
+        f"√(m2/m1): {math.sqrt(float(sim.mass_ratio)):.2f}",
         "",
         f"π Approximation: {pi_approx:.8f}",
         f"True π: {math.pi:.8f}",

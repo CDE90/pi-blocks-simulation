@@ -25,6 +25,8 @@ This simulation was inspired by videos by:
     -   Numerical precision
 -   Live display of collision count, pi approximation, and error percentage
 
+![Screenshot of the simulation](screenshot.png)
+
 ## Requirements
 
 -   Python 3.13+
@@ -34,7 +36,7 @@ This simulation was inspired by videos by:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/pi-blocks-simulation.git
+git clone https://github.com/CDE90/pi-blocks-simulation.git
 cd pi-blocks-simulation
 
 # Install dependencies using uv
